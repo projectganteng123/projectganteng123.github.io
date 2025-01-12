@@ -1,5 +1,4 @@
 /* styles.css */
-
 /* Loading  */
 /* From Uiverse.io by SchawnnahJ */ 
 .loader {
@@ -76,6 +75,7 @@
     top: calc(50% - 1.25em);
     left: calc(50% - 1.25em);
    }
+
 
 /* Reset and General Styles */
 body {
@@ -233,7 +233,7 @@ main {
 /* Section Styles */
 section {
     scroll-margin-top: 100px; /* Sesuaikan dengan tinggi navbar */
-    padding: 40px;
+    padding: 20px 40px;
     margin: 20px auto;
     max-width: 1200px;
     background: white;
@@ -283,7 +283,6 @@ h1 {
 }
 
 #about {
-    padding: 40px;
     background-color: #f9f9f9; /* Warna latar belakang yang lembut */
     text-align: center; /* Menyelaraskan teks ke tengah */
     max-height: 80vh;
@@ -292,6 +291,7 @@ h1 {
 h2 {
     font-size: 2.5em; /* Ukuran font untuk judul */
     margin-bottom: 20px; /* Jarak bawah judul */
+    margin-top: 10px;
 }
 
 .about-container {
@@ -343,7 +343,6 @@ h2 {
 /* Products Section */
 /* Gaya untuk menu */
 #menu {
-    padding: 20px;
     background-color: #f9f9f9; /* Warna latar belakang yang lembut */
     text-align: center; /* Menyelaraskan teks ke tengah */
 }
@@ -420,7 +419,6 @@ h2 {
 
 
 #products {
-    padding: 40px;
     background-color: #f9f9f9; /* Warna latar belakang yang lembut */
     text-align: center; /* Menyelaraskan teks ke tengah */
 }
@@ -507,7 +505,6 @@ h2 {
 
 
 #featured {
-    padding: 40px;
     background-color: #f9f9f9; /* Warna latar belakang yang lembut */
     text-align: center; /* Menyelaraskan teks ke tengah */
 }
@@ -576,7 +573,6 @@ h2 {
 
 
 #reviews {
-    padding: 40px;
     background-color: #f9f9f9; /* Warna latar belakang yang lembut */
     text-align: center; /* Menyelaraskan teks ke tengah */
 }
