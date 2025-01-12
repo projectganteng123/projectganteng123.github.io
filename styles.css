@@ -226,6 +226,7 @@ h2 {
 }
 
 .about-image {
+    
     width: 20%; /* Mengatur lebar gambar */
     height: auto; /* Memastikan gambar tetap proporsional */
     border-radius: 10px; /* Sudut melengkung pada gambar */
