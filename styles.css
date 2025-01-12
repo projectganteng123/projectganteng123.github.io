@@ -232,19 +232,19 @@ h2 {
 }
 @media (max-width: 768px){
     .about-image{
-        content: url('images/about-image2.png');
+        content: url('images/about-image2.webp');
     }
 }
 
 @media (max-width: 576px){
     .about-image{
-        content: url('images/about-image.jpg');
+        content: url('images/about-image.webp');
     }
 }
     
 @media (max-width: 370px){
     .about-image{
-        content: url('images/about-image2.png');
+        content: url('images/about-image2.webp');
     }
 }
     
@@ -663,6 +663,7 @@ footer {
     
     /* Section Styles */
     section {
+        padding: 5px 20px;
         margin: 10px auto;
         background: white;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -698,12 +699,23 @@ footer {
         margin-top: 0.2em;
         margin-bottom: 0.5em; /* Jarak bawah judul */
     }
+
+    .about-container {
+        display: flex; /* Atur flexbox jika diperlukan untuk tata letak */
+        align-items: center; /* Pastikan gambar dan konten lain sejajar secara vertikal */
+        height: 300px; /* Atur tinggi about-container sesuai kebutuhan */
+        position: relative;
+        overflow: hidden; /* Pastikan gambar yang keluar dari container terpotong */
+    }
     
     .about-image {
-        width: 35%; /* Mengatur lebar gambar */
-        height: auto; /* Memastikan gambar tetap proporsional */
-        border-radius: 10px; /* Sudut melengkung pada gambar */
+        width: 35%; /* Lebar gambar tetap 20% */
+        height: 100%; /* Isi penuh tinggi container */
+        object-fit: cover; /* Memastikan gambar menyesuaikan ukuran tanpa distorsi */
+        object-position: center; /* Menampilkan bagian tengah gambar */
+        border-radius: 10px; /* Sudut melengkung */
     }
+    
 
     .about-text {
         
