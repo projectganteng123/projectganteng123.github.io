@@ -38,9 +38,9 @@ const homeSection = document.getElementById('home'); // Mengambil elemen bagian 
 
 // Daftar gambar latar belakang
 const backgrounds = [
-    'images/home_bg_1.png', // Gambar latar belakang 1
-    'images/home_bg_2.jpg', // Gambar latar belakang 2
-    'images/home_bg_3.png'  // Gambar latar belakang 3
+    'images/home_bg_1.webp', // Gambar latar belakang 1
+    'images/home_bg_2.webp', // Gambar latar belakang 2
+    'images/home_bg_3.webp'  // Gambar latar belakang 3
 ];
 
 let currentIndex = 0; // Indeks gambar latar belakang saat ini
