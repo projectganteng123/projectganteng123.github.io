@@ -1,3 +1,9 @@
+// Loading
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none'; // Sembunyikan loading screen
+});
+
 const hamburger = document.querySelector('.hamburger'); // Mengambil elemen tombol hamburger
 const sidebar = document.querySelector('.sidebar'); // Mengambil elemen sidebar
 
