@@ -52,6 +52,7 @@
     <main>
     <section id="home"> <!-- Bagian beranda -->
         <div class="home-content">
+            
             <h1>Selamat Datang di Toko Merchandise Sousou no Frieren</h1> <!-- Judul selamat datang -->
             <p class="slogan">Temukan berbagai merchandise menarik dari anime favorit Anda!</p> <!-- Slogan toko -->
             <p class="description"> <!-- Deskripsi tentang produk yang ditawarkan -->
@@ -336,21 +337,22 @@
         <button id="scrollToTop">Scroll to Top</button> <!-- Tombol untuk kembali ke atas halaman -->
     </footer>
 
-    <script src="script.js"></script> <!-- Menghubungkan file JavaScript -->
 </main>
-    <script>
+
+<script>
 // Loading
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.display = 'none'; // Sembunyikan loading screen
 });
 
+
+
 const hamburger = document.querySelector('.hamburger'); // Mengambil elemen tombol hamburger
 const sidebar = document.querySelector('.sidebar'); // Mengambil elemen sidebar
 
 // Menambahkan event listener untuk mengubah visibilitas sidebar saat tombol hamburger diklik
 hamburger.addEventListener('click', (event) => {
-    sidebar.style.top = '0px';
     if (sidebar.style.right === '0px') {
         sidebar.style.right = '-250px'; // Menyembunyikan sidebar
     } else {
@@ -358,21 +360,6 @@ hamburger.addEventListener('click', (event) => {
     }
     event.stopPropagation(); // Mencegah klik pada hamburger dianggap klik di luar sidebar
 });
-
-
-const header = document.querySelector('header');
-
-// Fungsi untuk mengatur padding atas sidebar
-function adjustSidebarPadding() {
-    const headerHeight = header.offsetHeight; // Mengambil tinggi header
-    sidebar.querySelector('ul').style.paddingTop = headerHeight-20 + 'px'; // Mengatur padding atas pada ul di dalam sidebar
-}
-
-// Menyesuaikan padding saat halaman dimuat
-window.addEventListener('load', adjustSidebarPadding);
-// Menyesuaikan padding saat ukuran jendela diubah
-window.addEventListener('resize', adjustSidebarPadding);
-
 
 
 // Menutup sidebar saat mengklik di luar sidebar
@@ -420,20 +407,6 @@ document.addEventListener('DOMContentLoaded', () => { // Menunggu hingga konten 
         } else {
             alert('Harap isi semua kolom!'); // Peringatan jika kolom tidak diisi
         }
-    });
-
-    const scrollToTopBtn = document.getElementById('scrollToTop'); // Mengambil tombol scroll ke atas
-
-    window.addEventListener('scroll', () => { // Menambahkan event listener untuk scroll
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'block'; // Menampilkan tombol jika scroll lebih dari 300px
-        } else {
-            scrollToTopBtn.style.display = 'none'; // Menyembunyikan tombol jika scroll kurang dari 300px
-        }
-    });
-
-    scrollToTopBtn.addEventListener('click', () => { // Menambahkan event listener untuk klik tombol scroll ke atas
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Meng-scroll ke atas dengan efek halus
     });
 });
 
@@ -561,7 +534,7 @@ document.querySelectorAll('li a').forEach(link => {
         }
     });
 });
-   
+
 </script>
 </body>
 </html>
