@@ -454,33 +454,28 @@ function filterCategory(category) {
 }
 
 // Menambahkan event listener untuk gambar produk yang diperbesar saat diklik dua kali
-document.querySelectorAll('.product-image').forEach(image => {
+document.querySelectorAll('.product-image, .product-image-featured').forEach(image => {
     image.addEventListener('dblclick', function() {
         const enlargedImage = document.createElement('img'); // Membuat elemen gambar baru
-        enlargedImage.src = this.src; // Mengambil sumber gambar yang diklik
+        // Mengganti sumber gambar ke folder HD
+        enlargedImage.src = this.src.replace('images/Product/', 'images/ProductHD/'); 
         enlargedImage.classList.add('enlarged-image'); // Menambahkan kelas untuk gaya
         document.body.appendChild(enlargedImage); // Menambahkan gambar yang diperbesar ke body
 
+        // Menutup gambar yang diperbesar saat diklik di mana saja
         enlargedImage.addEventListener('click', function() {
             document.body.removeChild(enlargedImage); // Menghapus gambar yang diperbesar saat diklik
         });
-    });
-});
-
-// Menambahkan event listener untuk gambar produk unggulan yang diperbesar saat diklik dua kali
-document.querySelectorAll('.product-image-featured').forEach(image => {
-    image.addEventListener('dblclick', function() {
-        const enlargedImage = document.createElement('img'); // Membuat elemen gambar baru
-        enlargedImage.src = this.src; // Mengambil sumber gambar yang diklik
-        enlargedImage.classList.add('enlarged-image'); // Menambahkan kelas untuk gaya
-        document.body.appendChild(enlargedImage); // Menambahkan gambar yang diperbesar ke body
-
-        enlargedImage.addEventListener('click', function() {
-            document.body.removeChild(enlargedImage); // Menghapus gambar yang diperbesar saat diklik
+        
+        // Menutup gambar yang diperbesar saat mengklik di luar gambar
+        document.addEventListener('click', function(event) {
+            if (event.target === enlargedImage) {
+                document.body.removeChild(enlargedImage); // Menghapus gambar yang diperbesar saat diklik
+            }
         });
     });
 });
-
+   
 // Mengambil semua produk unggulan
 const featuredProducts = document.querySelectorAll('.featured-product');
 let currentIndex1 = 0; // Indeks produk unggulan saat ini
