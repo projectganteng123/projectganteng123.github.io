@@ -114,13 +114,14 @@ main {
   
 
 header {
+    position:sticky;
+    max-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #2c3e50; /* Dark color */
     color: #ecf0f1; /* Light text color */
     padding: 20px;
-    position: fixed; /* Fixed header */
     top: 0;
     left: 0;
     right: 0;
@@ -146,7 +147,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1vw;
 }
 
 nav ul li a {
@@ -223,7 +224,6 @@ nav ul li a:hover {
 
 /* Tambahkan margin atas pada konten utama untuk menghindari tumpang tindih dengan header */
 main {
-    margin-top: 140;              /* Menghapus margin default */
     padding: 0;             /* Menghapus padding default */
     box-sizing: border-box; /* Memastikan padding tidak memengaruhi ukuran elemen */
     background-color: #f4f4f4; /* Warna latar belakang (opsional) */
@@ -244,8 +244,9 @@ section {
 
 /* Home Section */
 
-
 #home {
+    border-radius: 0px 0px 40px 40px;
+    margin-top: -10px;
     position: relative;
     text-align: center;
     color: white;
@@ -259,26 +260,35 @@ section {
 }
 
 .home-content {
+    flex: auto;
     background-color: rgba(0, 0, 0, 0.4); /* Latar belakang semi-transparan untuk konten */
     padding: 40px;
     border-radius: 10px; /* Sudut melengkung */
     max-width: 600px; /* Lebar maksimum konten */
     max-height: 50vh;
 }
-
+nav a {
+    font-size: 1.2vw;
+}
 h1 {
     padding-inline: 5px;
-    font-size: 2.5em; /* Ukuran font untuk judul */
+    font-size: 2.2vw; /* Ukuran font untuk judul */
     margin: 0;
 }
+h2 {
+    font-size: 2.5em; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+    margin-top: 10px;
+}
+
 
 .slogan {
-    font-size: 1.5em; /* Ukuran font untuk slogan */
+    font-size: 1.2em; /* Ukuran font untuk slogan */
     margin: 10px 0;
 }
 
 .description {
-    font-size: 1.2em; /* Ukuran font untuk deskripsi */
+    font-size: 1em; /* Ukuran font untuk deskripsi */
     line-height: 1.5; /* Jarak antar baris */
 }
 
@@ -288,11 +298,7 @@ h1 {
     max-height: 80vh;
 }
 
-h2 {
-    font-size: 2.5em; /* Ukuran font untuk judul */
-    margin-bottom: 20px; /* Jarak bawah judul */
-    margin-top: 10px;
-}
+
 
 .about-container {
     display: flex; /* Menggunakan flexbox untuk tata letak */
@@ -505,6 +511,7 @@ h2 {
 
 
 #featured {
+    padding-inline: 20px;
     background-color: #f9f9f9; /* Warna latar belakang yang lembut */
     text-align: center; /* Menyelaraskan teks ke tengah */
 }
@@ -524,7 +531,7 @@ h2 {
     margin: 15px; /* Jarak antar produk */
     overflow: hidden; /* Menghindari konten meluap */
     transition: transform 0.3s; /* Transisi untuk efek hover */
-    width: 270px; /* Lebar tetap untuk setiap produk */
+    width: 260px; /* Lebar tetap untuk setiap produk */
     height: 400px; /* Tinggi tetap untuk setiap produk */
 }
 
@@ -731,10 +738,7 @@ footer {
 
 /* Small Device Adjustments */
 @media (max-width: 576px) {
-    main {
-        margin-top: 100px; /* Sesuaikan dengan tinggi header */
-    }
-    
+
     /* Section Styles */
     section {
         padding: 5px 20px;
