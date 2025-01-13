@@ -1,6 +1,17 @@
 /* styles.css */
 /* Loading  */
 /* From Uiverse.io by SchawnnahJ */ 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 999; /* Ensure it covers other content */
+    display: none; /* Hidden by default */
+}
+
 .loader {
     position: relative;
     width: 2.5em;
