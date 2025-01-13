@@ -9,6 +9,7 @@ const sidebar = document.querySelector('.sidebar'); // Mengambil elemen sidebar
 
 // Menambahkan event listener untuk mengubah visibilitas sidebar saat tombol hamburger diklik
 hamburger.addEventListener('click', (event) => {
+    sidebar.style.top = 0px;
     if (sidebar.style.right === '0px') {
         sidebar.style.right = '-250px'; // Menyembunyikan sidebar
     } else {
